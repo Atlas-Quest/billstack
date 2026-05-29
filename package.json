@@ -1,0 +1,39 @@
+{
+  "name": "billstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "test": "ava --serial",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "ava": {
+    "files": [
+      "src/tests/**/*.test.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "nodeArguments": [
+      "--import=tsx"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
+    "ava": "^8.0.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "postgres": "^3.4.9",
+    "express": "^5.2.1"
+  }
+}
