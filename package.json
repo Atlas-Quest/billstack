@@ -8,7 +8,10 @@
     "dev": "tsx watch src/index.ts",
     "test": "ava --serial",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "db:migrate": "dbmate -d src/db/migrations up",
+    "db:status": "dbmate -d src/db/migrations status",
+    "db:new": "dbmate -d src/db/migrations new"
   },
   "ava": {
     "files": [
@@ -33,7 +36,8 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "postgres": "^3.4.9",
-    "express": "^5.2.1"
+    "dbmate": "^2.33.0",
+    "express": "^5.2.1",
+    "postgres": "^3.4.9"
   }
 }
